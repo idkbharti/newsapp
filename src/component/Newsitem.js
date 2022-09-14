@@ -4,7 +4,7 @@ export default function Newsitem(props) {
   let { title, description, imageUrl, newsUrl, author, date } = props;
   return (
   <>
-    <div className=" mt-2 max-w-sm bg-gray-100 rounded-lg border  border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div className=" mt-2 max-w-sm bg-gray-100 rounded-lg border  border-gray-200 shadow-md">
     <a >
         <img className="rounded-t-lg w-full h-52 " src={!imageUrl?"https://picsum.photos/400/200":imageUrl} alt="" />
     </a>
