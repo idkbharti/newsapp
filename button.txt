@@ -1,0 +1,25 @@
+ {/* <div className="mr-10 flex justify-end gap-2">
+        <div>
+          <button
+            disabled={page <= 1}
+            onClick={() => setPage(page - 1)}
+            className="inline-flex text-gray-200 bg-slate-900 border-0 py-1 px-4 disabled:opacity-70 hover:bg-gray-600 rounded text-lg"
+          >
+            &larr;
+          </button>
+        </div>
+        <div>
+          <button
+            disabled={page + 1 > Math.ceil(totalResults/props.size)}
+            onClick={() => {
+              setPage(page + 1);
+            }}
+            className="inline-flex text-gray-200 bg-slate-900 border-0 py-1 px-4 focus:outline-none hover:bg-gray-600 disabled:opacity-70 rounded text-lg"
+          >
+             &rarr;
+          </button>
+        </div>
+      </div> */}
+
+
+pub_11003a576988a04b3c133df65a8fd509b202d
