@@ -44,8 +44,8 @@ setArticles(parsedData.results);
 
   return (
     <>
-    <div className="bg-gray-50 pt-40 md:pt-24">
-    <h1 className="text-center font-bold text-2xl text-gray-500 mx-auto">NewZy - Top {capitalizeFirstLetter(props.category)} Headlines</h1> 
+    <div className="bg-gray-50 pt-32 md:pt-20 md:px-40">
+    <h1 className="text-center font-bold text-2xl text-gray-500 mx-auto">Top {capitalizeFirstLetter(props.category)} Headlines</h1> 
      {loading && <Loading/>}
       <InfiniteScroll
                     dataLength={articles.length}
@@ -54,14 +54,14 @@ setArticles(parsedData.results);
                     loader={<h1>...</h1>}
                 > 
     
-  <div className="flex flex-wrap justify-center gap-5 px-3  mt-4">
+  <div className="flex flex-wrap justify-center gap-5 px-3 mt-4">
       {!loading && articles.map((elements, id) => {
           return (
             <div key={id}>
               <Newsitem
                 title={elements.title}
                 imageUrl={elements.image_url}
-                description={elements.description ? elements.description.slice(0,200) : ""}
+                description={elements.description ? elements.description.slice(0,180) :elements.title.slice(0,180)}
                 newsUrl={elements.link}
                 author={elements.source_id}
                 date={elements.pubDate}
