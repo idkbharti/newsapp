@@ -9,7 +9,7 @@ export default function Newsitem(props) {
         <img className="rounded-t-lg w-full h-36" src={!imageUrl?"https://picsum.photos/400/200":imageUrl} alt="" />
     </a>
     <div className="p-2">
-    <div className=" w-full h-36 overflow-hidden">
+    <div className=" w-full h-32 overflow-hidden ">
         <a >
             <h5 className="mb-1 text-sm font-semibold  tracking-tight text-gray-700">{title}</h5>
         </a>
