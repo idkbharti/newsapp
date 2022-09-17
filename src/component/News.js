@@ -14,14 +14,17 @@ export default function News(props) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 } 
 const updateNews = async () => {
-    
+  props.setProgress(10); 
   const url = `https://newsdata.io/api/1/news?apikey=${props.apiKey}&country=${props.country}&page=${page}&category=${props.category}`;
   setLoading(true);
   let data = await fetch(url);
+  props.setProgress(30);
   let parsedData = await data.json();
+  props.setProgress(70);
 setArticles(parsedData.results);
   setTotalResults(parsedData.totalResults);
   setLoading(false);
+  props.setProgress(100);
   console.log(props.category,parsedData.length,url,page,)
 };
 
