@@ -7,7 +7,7 @@ export default function Nav() {
        
         <span className="text-3xl text-gray-500"></span></Link> */}
       
-      <nav className="md:mx-40 flex flex-wrap  p-5 font-bold flex-row md:flex-row items-center text-base justify-center">
+      <nav className="md:mx-40 flex flex-wrap p-5 font-bold flex-row md:flex-row items-center text-base justify-center">
         <Link to="/world" className="ml-5 text-font-bold hover:text-gray-700">World</Link>
         <Link to="/politics" className="ml-5 text-font-bold hover:text-gray-700">Politics</Link >
         <Link to="/business" className="ml-5 text-font-bold hover:text-gray-700">Business</Link >

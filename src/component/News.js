@@ -45,7 +45,7 @@ setArticles(parsedData.results);
   return (
     <>
     <div className="bg-gray-50">
-    <h1 className="text-center font-bold pt-36 md:pt-24 text-2xl text-gray-500 mx-auto">Top {capitalizeFirstLetter(props.category)} Headlines</h1> 
+    <h1 className="text-center font-bold pt-32 md:pt-20 text-2xl text-gray-500 mx-auto">Top {capitalizeFirstLetter(props.category)} Headlines</h1> 
      {loading && <Loading/>}
       <InfiniteScroll
                     dataLength={articles.length}
@@ -54,7 +54,7 @@ setArticles(parsedData.results);
                     loader={<h1>...</h1>}
                 > 
     
-  <div className="flex flex-wrap justify-center md:gap-4 gap-y-2 px-2 mt-4">
+  <div className="flex flex-wrap justify-center md:gap-4 gap-y-2 px-2 mt-4 mx-2">
       {!loading && articles.map((elements, id) => {
           return (
             <div key={id}>
