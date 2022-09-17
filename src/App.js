@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 
 function App() {
   const pageSize = 9;
-  const apiKey = "pub_11003a576988a04b3c133df65a8fd509b202d"
+  const apiKey = process.env.REACT_APP_NEWS_API
+  console.log(apiKey)
   return (
     <div>
       <Router>
