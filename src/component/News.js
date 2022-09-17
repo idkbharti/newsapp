@@ -54,7 +54,7 @@ setArticles(parsedData.results);
                     loader={<h1>...</h1>}
                 > 
     
-  <div className="flex flex-wrap justify-center md:gap-4 gap-y-2 px-2 mt-4 mx-2">
+  <div className="flex flex-wrap justify-center md:gap-4 gap-y-3 px-2 mt-4 mx-2">
       {!loading && articles.map((elements, id) => {
           return (
             <div key={id}>
