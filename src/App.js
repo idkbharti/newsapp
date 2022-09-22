@@ -20,7 +20,7 @@ function App() {
       />
        
       <Routes>
-            <Route exact path="/" element={<News key="world" apiKey={apiKey} setProgress={setProgress} pageSize={pageSize} country="in" category="world"/>}></Route>
+            <Route  path="/" element={<News key="world" apiKey={apiKey} setProgress={setProgress} pageSize={pageSize} country="in" category="world"/>}></Route>
             <Route exact path="/politics" element={<News key="politics" apiKey={apiKey} setProgress={setProgress} pageSize={pageSize} country="in" category="politics"/>}> </Route>
             <Route exact path="/business" element={<News key="business" apiKey={apiKey} setProgress={setProgress} pageSize={pageSize} country="in" category="business"/>}></Route>
             <Route exact path="/entertainment" element={<News key="entertainment" apiKey={apiKey} setProgress={setProgress} pageSize={pageSize}country="in"category="entertainment"/>}></Route>
