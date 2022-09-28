@@ -59,10 +59,10 @@ const updateNews = async () => {
                     dataLength={articles.length}
                     next={fetchMoreData}
                     hasMore={articles.length !== totalResults}
-                    loader={<Loading/>}
+                    loader={<h6 className="text-center">loading...</h6>}
                 > 
     
-  <div className="flex flex-wrap justify-center md:gap-4 gap-y-3 px-1 mt-4">
+  <div className="flex flex-wrap justify-center md:gap-4 p-2 gap-y-2 md:mx-40 mt-4">
       {!loading && articles.map((elements, id) => {
           return (
             <div key={id}>

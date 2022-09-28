@@ -44,7 +44,7 @@ function NewsQuery() {
 
   return (
     <div>
-      <div className="bg-gray-50 h-full">
+      <div className="bg-gray-50">
         <h1 className="text-center font-bold pt-32 md:pt-20 text-2xl text-gray-500 mx-auto">
           "{res}" Result
         </h1>
@@ -53,9 +53,9 @@ function NewsQuery() {
           dataLength={articles.length}
           next={fetchMoreData}
           hasMore={articles.length !== totalResults}
-          loader={<Loading></Loading>}
+          loader={<h6 className="text-center">loading...</h6>}
         >
-          <div className="flex flex-wrap justify-center md:gap-4 gap-y-3 px-2 mt-4">
+          <div className="flex flex-wrap justify-center md:gap-4 p-2 md:mx-40 mt-4">
             {!loading &&
               articles.map((elements, id) => {
                 return (
