@@ -3,6 +3,7 @@ import Nav from "./component/Nav";
 import News from "./component/News";
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
+import NewsQuery from "./component/NewsQuery"
 
 function App() {
   const pageSize = 9;
@@ -13,6 +14,7 @@ function App() {
     <div>
       <Router>
         <Nav/>
+        
         <LoadingBar
         height={2}
         color='#7F4AA4'
@@ -29,6 +31,8 @@ function App() {
             <Route exact path="/science" element={<News key="science" apiKey={apiKey} pageSize={pageSize} setProgress={setProgress} country="in"category="science"/>}></Route>
             <Route exact path="/sports" element={<News key="sports" apiKey={apiKey}pageSize={pageSize} setProgress={setProgress} country="in" category="sports"/>}></Route>
             <Route exact path="/technology" element={<News key="technology" apiKey={apiKey}  pageSize={pageSize} setProgress={setProgress} country="in"category="technology"/>}></Route>
+            <Route exact path="/query" element={<NewsQuery key="query"/>}></Route>
+            
         </Routes>
         
       </Router>

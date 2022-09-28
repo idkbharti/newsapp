@@ -9,6 +9,7 @@ export default function News(props) {
   const [totalResults, setTotalResults] = useState(0);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -21,11 +22,11 @@ const updateNews = async () => {
   props.setProgress(30);
   let parsedData = await data.json();
   props.setProgress(70);
-setArticles(parsedData.results);
+  setArticles(parsedData.results);
   setTotalResults(parsedData.totalResults);
   setLoading(false);
   props.setProgress(100);
-  console.log(props.category,parsedData.length,url,page,)
+  console.log(url)
 };
 
  
@@ -48,16 +49,20 @@ setArticles(parsedData.results);
   return (
     <>
     <div className="bg-gray-50">
+
+    
+
+
     <h1 className="text-center font-bold pt-32 md:pt-20 text-2xl text-gray-500 mx-auto">Top {capitalizeFirstLetter(props.category)} Headlines</h1> 
      {loading && <Loading/>}
       <InfiniteScroll
                     dataLength={articles.length}
                     next={fetchMoreData}
                     hasMore={articles.length !== totalResults}
-                    loader={<h1>...</h1>}
+                    loader={<Loading/>}
                 > 
     
-  <div className="flex flex-wrap justify-center md:gap-4 gap-y-3 px-2 mt-4 mx-2">
+  <div className="flex flex-wrap justify-center md:gap-4 gap-y-3 px-1 mt-4">
       {!loading && articles.map((elements, id) => {
           return (
             <div key={id}>
