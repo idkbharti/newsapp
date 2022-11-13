@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { searchQuery } from "../searchSlice";
 import { BsSearch } from "react-icons/bs";
+import {CgProfile} from "react-icons/cg"
 
 export const Search = () => {
   const [query, setQuery] = useState("");
@@ -39,6 +40,7 @@ setTimeout(hide,10000)
         :
         <BsSearch onClick={handleVisiblity} className="bg-yellow-600 mx-2 p-2  rounded-full fixed top-[14px] right-10 z-[1000]" size={35} />
         }
+        <CgProfile className="bg-yellow-600 mx-2 p-2  rounded-full fixed top-[14px] right-0 z-[1000]" size={35} />
       
        
 
