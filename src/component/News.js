@@ -49,11 +49,7 @@ const updateNews = async () => {
   return (
     <>
     <div className="bg-gray-50">
-
-    
-
-
-    <h1 className="text-center font-bold pt-32 md:pt-20 text-2xl text-gray-500 mx-auto">Top {capitalizeFirstLetter(props.category)} Headlines</h1> 
+    <h1 className="text-center font-bold pt-5 sm:pt-20 text-2xl text-gray-500 mx-auto">Top {capitalizeFirstLetter(props.category)} Headlines</h1> 
      {loading && <Loading/>}
       <InfiniteScroll
                     dataLength={articles.length}
@@ -62,7 +58,7 @@ const updateNews = async () => {
                     loader={<h6 className="text-center">loading...</h6>}
                 > 
     
-  <div className="flex flex-wrap justify-center md:gap-4 p-2 gap-y-2 md:mx-40 mt-4">
+  <div className="flex flex-wrap justify-center p-2 gap-4 md:mx-10 mt-4">
       {!loading && articles.map((elements, id) => {
           return (
             <div key={id}>

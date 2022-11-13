@@ -4,6 +4,7 @@ import News from "./component/News";
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
 import NewsQuery from "./component/NewsQuery"
+import { Search } from "./component/Search";
 
 function App() {
   const pageSize = 9;
@@ -14,6 +15,7 @@ function App() {
     <div>
       <Router>
         <Nav/>
+        <Search/>
         
         <LoadingBar
         height={2}

@@ -8,12 +8,12 @@ export const searchSlice = createSlice({
   },
   reducers: {
     
-    incrementByAmount: (state, action) => {
+    searchQuery: (state, action) => {
       state.value = action.payload
     },
   },
 })
 
-export const { decrement, incrementByAmount } = searchSlice.actions;
+export const {searchQuery } = searchSlice.actions;
 
 export default searchSlice.reducer;

@@ -45,7 +45,7 @@ function NewsQuery() {
   return (
     <div>
       <div className="bg-gray-50">
-        <h1 className="text-center font-bold pt-32 md:pt-20 text-2xl text-gray-500 mx-auto">
+        <h1 className="text-center font-bold pt-5 sm:pt-20 text-2xl text-gray-500 mx-auto">
           "{res}" Result
         </h1>
        
