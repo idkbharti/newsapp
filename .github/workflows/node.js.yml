@@ -20,7 +20,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.5.0
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3.5.1
@@ -36,7 +36,7 @@ jobs:
       run: npm test -- --coverage
 
     - name: Codecov
-      uses: codecov/codecov-action@v2.1.0
+      uses: codecov/codecov-action@v3.1.1
 
     - name: Netlify Deploy
       # uses: jsmrcaga/action-netlify-deploy@v1.7.1
