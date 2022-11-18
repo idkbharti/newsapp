@@ -44,7 +44,7 @@ const updateNews = async () => {
     let parsedData = await data.json()
     setArticles(articles.concat(parsedData.results))
     setTotalResults(parsedData.totalResults)
-    console.log("hi .....")
+    console.log("hi helo.....")
   };
 
   return (
