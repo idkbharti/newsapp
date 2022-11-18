@@ -44,10 +44,12 @@ const updateNews = async () => {
     let parsedData = await data.json()
     setArticles(articles.concat(parsedData.results))
     setTotalResults(parsedData.totalResults)
+    console.log("hi")
   };
 
   return (
     <>
+    
     <div className="bg-gray-50">
     <h1 className="text-center font-bold pt-5 sm:pt-20 text-2xl text-gray-500 mx-auto">Top {capitalizeFirstLetter(props.category)} Headlines</h1> 
      {loading && <Loading/>}
