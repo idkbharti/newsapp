@@ -6,7 +6,7 @@ import {BiBuildings,BiMoviePlay} from "react-icons/bi"
 import {MdOutlineBiotech,MdSportsSoccer,MdOutlineHealthAndSafety} from "react-icons/md"
 
 
-export default function Nav() {
+export default function Navbar() {
   const [isHovering, setIsHovering] = useState(false);
 const size =25;
 

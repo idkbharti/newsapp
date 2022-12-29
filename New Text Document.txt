@@ -1,3 +1,0 @@
-  // "homepage": "http://nubdeveloper.github.io/newsapp",
-   "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",

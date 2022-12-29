@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Newsitem(props) {
+export default function Card(props) {
   let { title, description, imageUrl, newsUrl, author, date } = props;
   return (
   <>

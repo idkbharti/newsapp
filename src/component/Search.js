@@ -11,10 +11,16 @@ export const Search = () => {
   const [inputSearch, setInputSearch] = useState(false);
   const dispatch = useDispatch();
 
-  function handleVisiblity(){
+function handleVisiblity(){
 setInputSearch(true)
 const hide=function(){setInputSearch(false)}
 setTimeout(hide,10000)
+  }
+
+  function handlequerry(e){
+
+  setQuery(e.target.value)
+
   }
   return (
     <>
@@ -31,9 +37,7 @@ setTimeout(hide,10000)
         aria-label="Search"
         aria-describedby="button-addon2"
         value={query}
-        onChange={(e) => {
-          return setQuery(e.target.value);
-        }}
+        onChange={handlequerry}
       />
           <Link to="/query"> <BsSearch className="bg-yellow-600 mx-2 p-2  rounded-full" size={35} /></Link>
         </button> 

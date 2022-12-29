@@ -1,9 +1,8 @@
 import {useState} from "react"
-import Nav from "./component/Nav";
+import Navbar from "./component/Navbar";
 import News from "./component/News";
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
-import NewsQuery from "./component/NewsQuery"
 import { Search } from "./component/Search";
 
 function App() {
@@ -12,9 +11,9 @@ function App() {
   const [progress, setProgress] = useState(0)
  
   return (
-    <div>
+    <div className="bg-gray-50">
       <Router>
-        <Nav/>
+        <Navbar/>
         <Search/>
         
         <LoadingBar
@@ -33,7 +32,7 @@ function App() {
             <Route exact path="/science" element={<News key="science" apiKey={apiKey} pageSize={pageSize} setProgress={setProgress} country="in"category="science"/>}></Route>
             <Route exact path="/sports" element={<News key="sports" apiKey={apiKey}pageSize={pageSize} setProgress={setProgress} country="in" category="sports"/>}></Route>
             <Route exact path="/technology" element={<News key="technology" apiKey={apiKey}  pageSize={pageSize} setProgress={setProgress} country="in"category="technology"/>}></Route>
-            <Route exact path="/query" element={<NewsQuery key="query"/>}></Route>
+            <Route exact path="/query" element={<News key="technology" apiKey={apiKey}  pageSize={pageSize} setProgress={setProgress} country="in"category="technology"/>}></Route>
             
         </Routes>
         

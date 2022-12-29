@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
-import Newsitem from "./Newsitem";
+import Card from "./Card";
 import Loading from "./Loding"
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
+import { useSelector } from "react-redux";
+
 
 export default function News(props) {
   const [articles, setArticles] = useState([]);
   const [totalResults, setTotalResults] = useState(0);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
+
+  const res = useSelector((state) => state.search.value);
+  console.log(res);
   
 
   const capitalizeFirstLetter = (string) => {
@@ -16,7 +21,13 @@ export default function News(props) {
 } 
 const updateNews = async () => {
   props.setProgress(10); 
-  const url = `https://newsdata.io/api/1/news?apikey=${props.apiKey}&country=${props.country}&page=${page}&category=${props.category}`;
+  var url=""
+ if(res.length>1){
+  url = `https://newsdata.io/api/1/news?apikey=pub_11003a576988a04b3c133df65a8fd509b202d&&q=${res}&page=${page}`;
+
+ }else{
+   url = `https://newsdata.io/api/1/news?apikey=${props.apiKey}&country=${props.country}&page=${page}&category=${props.category}`;
+ }
   setLoading(true);
   let data = await fetch(url);
   props.setProgress(30);
@@ -34,11 +45,17 @@ const updateNews = async () => {
   useEffect(() => {
     document.title = `${capitalizeFirstLetter(props.category)} - NewZy`;
     updateNews(); 
-  },[]);
+  },[res]);
 
   const fetchMoreData = async () => {   
     
-    const url = `https://newsdata.io/api/1/news?apikey=${props.apiKey}&country=${props.country}&page=${page}&category=${props.category}`;
+    var url=""
+    if(res.length>1){
+     url = `https://newsdata.io/api/1/news?apikey=pub_11003a576988a04b3c133df65a8fd509b202d&&q=${res}&page=${page}`;
+   
+    }else{
+      url = `https://newsdata.io/api/1/news?apikey=${props.apiKey}&country=${props.country}&page=${page}&category=${props.category}`;
+    }
     setPage(page+1) 
     let data = await fetch(url);
     let parsedData = await data.json()
@@ -64,7 +81,7 @@ const updateNews = async () => {
       {!loading && articles.map((elements, id) => {
           return (
             <div key={id}>
-              <Newsitem
+              <Card
                 title={elements.title}
                 imageUrl={elements.image_url}
                 description={elements.description ? elements.description :elements.title}
