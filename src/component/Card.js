@@ -16,7 +16,7 @@ export default function Card(props) {
         </a>
         <p className="mt-1 md:text-xs font-medium text-sm md:font-normal text-gray-700">{description}</p> </div>
         
-        <a href={newsUrl} className=" inline-flex items-center md:p-1 p-2 text-xs font-normal text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+        <a href={newsUrl} className="mt-2 px-3 py-2 inline-flex items-center  text-xs font-normal text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
             Read More</a>
         <br></br>
             <span className="text-xs text-gray-600 font-light" >{new Date(date).toGMTString()}</span>
